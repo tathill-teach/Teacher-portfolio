@@ -1,11 +1,1021 @@
-body{margin:0;font-family:Arial,sans-serif;background:#f7f3fc;color:#222}
-.hero{min-height:100vh;background:linear-gradient(135deg,#4b0082,#7b2cbf);color:white;padding:20px}
-nav{display:flex;justify-content:space-between;align-items:center}
-nav ul{display:flex;gap:20px;list-style:none}
-nav a{color:white;text-decoration:none}
-.hero-content{text-align:center;padding-top:60px}
-.profile{width:180px;height:180px;border-radius:50%;border:6px solid white;object-fit:cover}
-.btn{display:inline-block;background:white;color:#5a189a;padding:12px 24px;border-radius:30px;text-decoration:none;font-weight:bold}
-section{padding:60px 10%}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{background:white;padding:25px;border-radius:18px;box-shadow:0 8px 20px rgba(0,0,0,.12)}
+/* =====================================================
+   TATIYANA HILL TEACHER PORTFOLIO
+   VERSION 2
+====================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#f8f5ff;
+
+    color:#333;
+
+    line-height:1.7;
+
+    overflow-x:hidden;
+
+}
+
+/* ===============================
+   HERO SECTION
+================================ */
+
+.hero{
+
+    min-height:100vh;
+
+    background:linear-gradient(
+        135deg,
+        #2c0057,
+        #5a189a,
+        #7b2cbf,
+        #9d4edd
+    );
+
+    background-size:300% 300%;
+
+    animation:gradientMove 12s ease infinite;
+
+    color:white;
+
+    padding-bottom:80px;
+
+}
+
+@keyframes gradientMove{
+
+    0%{
+
+        background-position:0% 50%;
+
+    }
+
+    50%{
+
+        background-position:100% 50%;
+
+    }
+
+    100%{
+
+        background-position:0% 50%;
+
+    }
+
+}
+
+/* ===============================
+   NAVIGATION
+================================ */
+
+nav{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:30px 8%;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    backdrop-filter:blur(15px);
+
+    background:rgba(44,0,87,.30);
+
+}
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:white;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    gap:28px;
+
+    list-style:none;
+
+}
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#ffe66d;
+
+}
+
+/* ===============================
+   HERO CONTENT
+================================ */
+
+.hero-content{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:60px;
+
+    padding-top:80px;
+
+}
+
+.hero-image{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.hero-image img{
+
+    width:330px;
+
+    height:330px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:8px solid white;
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.35);
+
+    transition:.4s;
+
+}
+
+.hero-image img:hover{
+
+    transform:scale(1.04);
+
+}
+
+.hero-text{
+
+    flex:1;
+
+}
+
+.hero-text h1{
+
+    font-size:64px;
+
+    line-height:1.1;
+
+    margin-bottom:15px;
+
+}
+
+.hero-text h2{
+
+    font-size:28px;
+
+    font-weight:400;
+
+    margin-bottom:25px;
+
+}
+
+.contact{
+
+    margin-bottom:25px;
+
+    font-size:18px;
+
+}
+
+.contact i{
+
+    margin-right:8px;
+
+}
+
+.intro{
+
+    font-size:18px;
+
+    margin-bottom:35px;
+
+    max-width:650px;
+
+}
+
+.button{
+
+    display:inline-block;
+
+    background:white;
+
+    color:#5a189a;
+
+    padding:16px 36px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.button:hover{
+
+    background:#ffe66d;
+
+    transform:translateY(-4px);
+
+}
+
+/* ===============================
+   GENERAL SECTIONS
+================================ */
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+section{
+
+    padding:90px 0;
+
+}
+
+section h2{
+
+    text-align:center;
+
+    font-size:42px;
+
+    color:#5a189a;
+
+    margin-bottom:30px;
+
+}
+
+.section-description{
+
+    text-align:center;
+
+    max-width:850px;
+
+    margin:auto;
+
+    margin-bottom:50px;
+
+    font-size:18px;
+
+}
+/* ============================================
+   CERTIFICATION CARDS
+============================================ */
+
+.card-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+    margin-top:50px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    transition:.35s ease;
+
+    box-shadow:
+    0 15px 35px rgba(90,24,154,.12);
+
+    border:2px solid transparent;
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#7b2cbf;
+
+    box-shadow:
+    0 25px 50px rgba(90,24,154,.25);
+
+}
+
+.icon{
+
+    width:70px;
+
+    height:70px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+    135deg,
+    #5a189a,
+    #9d4edd);
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    margin-bottom:20px;
+
+}
+
+.card h3{
+
+    color:#5a189a;
+
+    font-size:24px;
+
+    margin-bottom:12px;
+
+}
+
+.card p{
+
+    color:#18a558;
+
+    font-weight:700;
+
+    font-size:20px;
+
+}
+
+/* ============================================
+   VIDEO SECTION
+============================================ */
+
+.video-card{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:25px;
+
+    box-shadow:
+    0 20px 45px rgba(90,24,154,.15);
+
+    margin-top:35px;
+
+}
+
+.video-card video{
+
+    width:100%;
+
+    border-radius:18px;
+
+}
+
+/* ============================================
+   VISION
+============================================ */
+
+.vision-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+
+    margin-top:45px;
+
+}
+
+.vision-card{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    transition:.35s;
+
+    box-shadow:
+    0 18px 35px rgba(90,24,154,.12);
+
+}
+
+.vision-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.vision-card h3{
+
+    color:#5a189a;
+
+    margin-bottom:18px;
+
+    font-size:24px;
+
+}
+
+.vision-card p{
+
+    font-size:17px;
+
+    color:#555;
+
+}
+
+/* ============================================
+   STRATEGY CARDS
+============================================ */
+
+.strategy-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+    margin-top:50px;
+
+}
+
+.strategy-card{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:
+    0 18px 35px rgba(90,24,154,.12);
+
+}
+
+.strategy-card:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.strategy-icon{
+
+    font-size:52px;
+
+    margin-bottom:20px;
+
+}
+
+.strategy-card h3{
+
+    color:#5a189a;
+
+    margin-bottom:18px;
+
+}
+
+.strategy-card p{
+
+    color:#555;
+
+}
+/* ============================================
+   INFO CARDS
+============================================ */
+
+.info-card{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:45px;
+
+    box-shadow:
+    0 18px 40px rgba(90,24,154,.12);
+
+    margin-top:40px;
+
+}
+
+.info-card h3{
+
+    color:#5a189a;
+
+    margin-top:25px;
+
+    margin-bottom:12px;
+
+    font-size:24px;
+
+}
+
+.info-card p{
+
+    color:#555;
+
+    font-size:17px;
+
+    margin-bottom:20px;
+
+}
+
+/* ============================================
+   LESSON PLAN
+============================================ */
+
+.lesson-card{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:45px;
+
+    box-shadow:
+    0 20px 40px rgba(90,24,154,.15);
+
+}
+
+.lesson-card h3{
+
+    color:#5a189a;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+}
+
+.lesson-card p{
+
+    font-size:17px;
+
+    color:#555;
+
+}
+
+.bell-ringer{
+
+    margin-top:35px;
+
+    background:#f8f3ff;
+
+    border-left:8px solid #7b2cbf;
+
+    padding:30px;
+
+    border-radius:18px;
+
+}
+
+.bell-ringer h3{
+
+    color:#5a189a;
+
+    margin-bottom:15px;
+
+}
+
+.bell-ringer h4{
+
+    color:#7b2cbf;
+
+    margin-top:20px;
+
+    margin-bottom:10px;
+
+}
+
+/* ============================================
+   RESUME
+============================================ */
+
+.resume-card{
+
+    text-align:center;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:60px;
+
+    box-shadow:
+    0 18px 40px rgba(90,24,154,.15);
+
+}
+
+.resume-card p{
+
+    font-size:18px;
+
+    margin-bottom:35px;
+
+}
+
+.resume-card .button{
+
+    background:#5a189a;
+
+    color:white;
+
+}
+
+.resume-card .button:hover{
+
+    background:#7b2cbf;
+
+}
+
+/* ============================================
+   CONTACT
+============================================ */
+
+#contact{
+
+    background:linear-gradient(
+    135deg,
+    #4b0082,
+    #7b2cbf);
+
+    color:white;
+
+}
+
+#contact h2{
+
+    color:white;
+
+}
+
+#contact p{
+
+    color:white;
+
+    font-size:18px;
+
+    margin-bottom:18px;
+
+    text-align:center;
+
+}
+
+footer{
+
+    background:#2d0052;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+footer p{
+
+    margin:0;
+
+}
+/* ============================================
+   ANIMATIONS
+============================================ */
+
+.card,
+.strategy-card,
+.vision-card,
+.info-card,
+.lesson-card,
+.resume-card,
+.video-card{
+
+    transition:all .35s ease;
+
+}
+
+.card:hover,
+.strategy-card:hover,
+.vision-card:hover,
+.info-card:hover,
+.lesson-card:hover,
+.resume-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* ============================================
+   SCROLLBAR
+============================================ */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#f4ecff;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#7b2cbf;
+
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#5a189a;
+
+}
+
+/* ============================================
+   LINKS
+============================================ */
+
+a{
+
+    transition:.3s;
+
+}
+
+a:hover{
+
+    opacity:.9;
+
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+============================================ */
+
+@media(max-width:1000px){
+
+.hero-content{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding-top:50px;
+
+}
+
+.hero-text{
+
+    order:2;
+
+}
+
+.hero-image{
+
+    order:1;
+
+}
+
+.hero-image img{
+
+    width:240px;
+
+    height:240px;
+
+}
+
+.hero-text h1{
+
+    font-size:48px;
+
+}
+
+.hero-text h2{
+
+    font-size:24px;
+
+}
+
+.contact{
+
+    font-size:16px;
+
+}
+
+.intro{
+
+    margin:auto;
+
+}
+
+nav{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+nav ul{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+section{
+
+    padding:70px 0;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.hero-image img{
+
+    width:190px;
+
+    height:190px;
+
+}
+
+.hero-text h1{
+
+    font-size:38px;
+
+}
+
+.hero-text h2{
+
+    font-size:20px;
+
+}
+
+section h2{
+
+    font-size:32px;
+
+}
+
+.card-grid,
+.strategy-grid,
+.vision-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.lesson-card,
+.info-card,
+.resume-card{
+
+    padding:30px;
+
+}
+
+.button{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+}
+
+/* ============================================
+   FINAL TOUCHES
+============================================ */
+
+body{
+
+    animation:fadeIn .8s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(15px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.hero::after{
+
+content:"";
+
+display:block;
+
+height:120px;
+
+background:linear-gradient(
+180deg,
+transparent,
+#f8f5ff);
+
+margin-top:60px;
+
+}
