@@ -1019,3 +1019,171 @@ transparent,
 margin-top:60px;
 
 }
+
+/* ==========================================
+   VERSION 3 ENHANCEMENTS
+========================================== */
+
+/* Sparkling Background */
+
+.hero{
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.35) 2px, transparent 3px),
+        radial-gradient(circle at 80% 15%, rgba(255,255,255,.25) 2px, transparent 3px),
+        radial-gradient(circle at 30% 70%, rgba(255,255,255,.30) 2px, transparent 3px),
+        radial-gradient(circle at 75% 65%, rgba(255,255,255,.25) 2px, transparent 3px),
+        radial-gradient(circle at 55% 40%, rgba(255,255,255,.35) 2px, transparent 3px);
+
+    animation:twinkle 8s linear infinite;
+
+    pointer-events:none;
+
+    opacity:.9;
+}
+
+@keyframes twinkle{
+
+    0%{
+        transform:translateY(0px);
+        opacity:.55;
+    }
+
+    50%{
+        transform:translateY(-10px);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(0px);
+        opacity:.55;
+    }
+
+}
+
+/* Hero Content stays above sparkles */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+nav{
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+/* Beautiful Glass Cards */
+
+.card,
+.strategy-card,
+.vision-card,
+.lesson-card,
+.resume-card,
+.info-card,
+.video-card{
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(14px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+}
+
+/* Better Hover */
+
+.card:hover,
+.strategy-card:hover,
+.vision-card:hover,
+.lesson-card:hover,
+.resume-card:hover{
+
+    transform:translateY(-12px) scale(1.02);
+
+    box-shadow:
+        0 25px 55px rgba(90,24,154,.28);
+
+}
+
+/* Pretty Passed Badge */
+
+.card p{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    background:#22c55e;
+
+    color:white;
+
+    padding:8px 20px;
+
+    border-radius:999px;
+
+    font-size:15px;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+/* Button Glow */
+
+.button{
+
+    box-shadow:
+        0 15px 35px rgba(90,24,154,.35);
+
+}
+
+.button:hover{
+
+    box-shadow:
+        0 20px 45px rgba(90,24,154,.45);
+
+}
+
+/* Smooth Section Fade */
+
+section{
+
+    animation:fadeUp .9s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
