@@ -1,0 +1,11 @@
+body{margin:0;font-family:Arial,sans-serif;background:#f7f3fc;color:#222}
+.hero{min-height:100vh;background:linear-gradient(135deg,#4b0082,#7b2cbf);color:white;padding:20px}
+nav{display:flex;justify-content:space-between;align-items:center}
+nav ul{display:flex;gap:20px;list-style:none}
+nav a{color:white;text-decoration:none}
+.hero-content{text-align:center;padding-top:60px}
+.profile{width:180px;height:180px;border-radius:50%;border:6px solid white;object-fit:cover}
+.btn{display:inline-block;background:white;color:#5a189a;padding:12px 24px;border-radius:30px;text-decoration:none;font-weight:bold}
+section{padding:60px 10%}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:white;padding:25px;border-radius:18px;box-shadow:0 8px 20px rgba(0,0,0,.12)}
